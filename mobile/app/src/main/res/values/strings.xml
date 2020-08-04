@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">FastDrugs</string>
+    <!--   Home  -->
+    <string name="botao_entrar_home">entrar</string>
+    <string name="botao_cadastrar_home">cadastrar</string>
+
+    <!--  Login   -->
+    <string name="botao_entrar_facebook">entrar com  facebook</string>
+    <string name="botao_entrar_google">entrar com o google</string>
+    <string name="nao_tem_conta_cadastrese">Não tem uma conta? </string>
+    <string name="cadastre">Cadastre-se </string>
+    <string name="login_cadastrese"><strong>Cadastre-se</strong></string>
+
+    <!-- Campos   -->
+    <string name="campo_email">Email</string>
+    <string name="campo_senha">Senha</string>
+    <string name="campo_data_nascimento_instrucao">Qual sua data de nascimento?</string>
+    <string name="campo_data_nascimento">00/00/0000</string>
+    <string name="campo_email_instrucao">Qual o seu e-mail?</string>
+    <string name="campo_validacao_email_instrucao">Digite o código de 5 digitos que enviamos para</string>
+    <string name="campo_validacao_email_email">email@email.com.br</string>
+    <string name="campo_nome_instrucao">Qual o seu nome completo?</string>
+    <string name="campo_nome">Nome completo</string>
+    <string name="campo_cpf_instrucao">Qual o seu CPF?</string>
+    <string name="campo_cpf">000.000.000-00</string>
+    <string name="campo_celular_instrucao">Qual o seu celular?</string>
+    <string name="campo_celular">(00) 90000-0000</string>
+    <string name="campo_cep_instrucao">Qual o seu CEP?</string>
+    <string name="campo_cep">00000-000</string>
+    <string name="campo_logradouro_instrucao">Logradouro</string>
+    <string name="campo_logradouro">Rua 15 de Julho</string>
+    <string name="campo_bairro_instrucao">Bairro</string>
+    <string name="campo_bairro">Jardim Carlos Alberto</string>
+    <string name="campo_cidade_instrucao">Cidade</string>
+    <string name="campo_estado_instrucao">Estado</string>
+    <string name="campo_cidade">São Paulo</string>
+    <string name="campo_estado">SP</string>
+    <string name="campo_complemento_instrucao">Complemento</string>
+    <string name="campo_complemento">...</string>
+    <string name="campo_numero_instrucao">Nº</string>
+    <string name="campo_numero">123</string>
+    <string name="campo_senha_instrucao">Senha</string>
+    <string name="campo_senha_ex">********</string>
+    <string name="campo_confirmar_senha_instrucao">Confirme seu senha</string>
+
+    <!--  Botão avançar páginas  -->
+    <string name="botao_proxima_etapa">próxima etapa</string>
+    <string name="botao_finalizar_cadastro">finalizar cadastro</string>
+
+    <!--  Usar localização  -->
+    <string name="usar_localizacao">Use minha localização</string>
+
+    <!-- Botões cadastro Email   -->
+    <string name="botao_cadastrar_facebook">Entrar com Facebook</string>
+    <string name="botao_cadastrar_google">Entrar com o google</string>
+
+    <!-- Textos slides   -->
+    <string name="slider_01_home"><b>Fast Drugs</b>, a plataforma das farmácias delivery</string>
+    <string name="slider_02_home">Texto 02</string>
+    <string name="slider_03_home">Texto 03</string>
+    <string name="slider_04_home">Texto 04</string>
+
+    <!--    Slides - Passo 09 - Criar as 'bolinhas' para passar os slides -->
+    <string name="dotted">&#8226;</string>
+    <string name="nao_recebi_meu_codigo">Não recebi meu código</string>
+
+    <!-- dados farmácia -->
+    <string name="app_nome_farmacia_lista">Farmácia Nova</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="facebook_app_id">2925714670818732</string>
+    <string name="fb_login_protocol_scheme">fb2925714670818732</string>
+
+</resources>

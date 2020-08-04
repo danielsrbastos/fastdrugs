@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        textarea {
+            resize: none;
+            overflow-y: auto;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        .my-border {
+            border-width: 0px 0px 0px 3px;
+            border-color: dodgerblue;
+        }
+    </style>
+    <title>Rotas De Farmacias</title>
+</head>
+
+<body>
+    <!-- Cabçalho -->
+    <header class="bg-dark mb-1">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">Documentação da API</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pharmacy.html">Farmacias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client.html">Clientes</a>
+                    </li>
+                </ul>
+                <div class="my-2 my-lg-0 ">
+                    <button value="adicionarRota" class="btnRoutes btn btn-outline-primary my-2 my-sm-0"
+                        type="submit">Adicionar nova rota</button>
+                    </form>
+                </div>
+        </nav>
+    </header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-2 p-0 ml-1 mr-1">
+                <!-- Menu de Rotas -->
+                <div id="caixaMenu" class="list-group list-group-flush">
+
+                </div>
+            </div>
+
+            <div id="cardContainer" class="col p-1">
+                <!-- Conteudos -->
+                <form>
+                    <div id="card${json.nomeId}" class="card mb-2">
+                        <div class="card-body d-flex flex-column">
+                            <div class="form-group">
+                                <label for="titulo">Titulo</label>
+                                <input type="text" class="form-control" id="titulo">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input rdWho" type="radio" name="exampleRadios" id="exampleRadios1" value="cliente" checked>
+                                    <label class="form-check-label " for="exampleRadios1">
+                                      Clientes
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input rdWho" type="radio" name="exampleRadios" id="exampleRadios2" value="farmacia">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      Farmacias
+                                    </label>
+                                  </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input id="subRota" class="form-check-input" type="checkbox" value="0">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                          SubRota
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="col">
+                                    <select id="tipoRota" class="form-control">
+                                        <option value="publicas">Rota Publica</option>
+                                        <option value="privadas">Rota Privada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="tituloRota" class="form-group">
+                                
+                            </div>
+                            <div class="form-group row">
+                                <label for="descricao" class="col-sm-2 col-form-label">Descrição</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="descricao">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="URL" class="col-sm-2 col-form-label">URL</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="url">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="PathVariaveis" class="col-sm-2 col-form-label">PathVariaveis</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="PathVariaveis">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Methods" class="col-sm-2 col-form-label">Method</label>
+                                <div class="col-sm-10">
+                                    <select id="tipoMethod" class="form-control">
+                                        <option value="GET">GET</option>
+                                        <option value="PUT">PUT</option>
+                                        <option value="DELETE">DELETE</option>
+                                        <option value="POST">POST</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-2 row d-flex align-items-center">
+                                <p class="col-2">
+                                    Status HTTP:
+                                </p>
+                                <div class="col-10 ">
+                                    <div id="statusHttpContainer">
+                                        <div class="form-group">
+                                            <label for="Methods"">Success</label>
+                                            <input type=" text" class="form-control" id="statusSuccess">
+                                        </div>
+                                    </div>
+                                    <button id="adicionarStatus" type="button" class="btn p-0 btn-link">Adicionar Erro<span class="h5">+</span></button>
+                                </div>
+                            </div>
+                            <div id="requestContainer" class="mb-3">
+                                <label for="RequestSuccess">Request</label>
+                                <textarea id="requestSuccess" class="caixaJson mb-2 p-1 form-control"></textarea>
+                            </div>
+                            <div id="responseContainer" class="form-group">
+                                <label for="ResponseSuccess">Response</label>
+                                <textarea id="responseSuccess" class="p-1 mb-2 caixaJson form-control"></textarea>
+                            </div>
+                            <div class="">
+                                <button value="0" id="salvarRota" class="btn btn-outline-primary" type="button">Adicionar Rota</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </form>
+        </div>
+        </div>
+    </section>
+    <script>
+        
+        const paginaMenu = (menu) => {
+            const btnAddRoute = document.getElementById('salvarRota')
+            const tipoRota = document.getElementById('tipoRota')
+            const subRota = document.getElementById('subRota')
+            const quem = document.querySelectorAll('.rdWho')
+
+            if (menu.tagName == "DIV"){
+                subRota.checked = true
+                btnAddRoute.value = menu.classList[0]
+                adicionarParametrosSubRotas()
+            }else{
+                subRota.checked = false
+                btnAddRoute.value = "0"
+                removerParametros()
+            }
+
+            quem.forEach(value => {
+                if (value.value == menu.classList[2]) {
+                    value.checked = true
+                }
+            })
+
+            for (let index = 0; index < tipoRota.options.length; index++) {
+                    if (tipoRota.options[index].value == menu.classList[1]) {
+                        tipoRota.options[index].selected = true
+                    }
+                }
+
+        }
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="./js/pageFunctions.js"></script>
+        <script src="./js/generateMenu.js"></script>
+        <script src="./js/FileSaver.js"></script>
+        <script src="./js/API.js"></script>
+        <script src="./js/consumoJson.js"></script>
+    <script>
+        $(function () {
+
+            $.getJSON("./json/API.json", function (data) {
+                console.log(data);
+                getJson(data, 'novaRota')
+            });
+
+        });
+        btnAddRoute()
+
+        url.addEventListener('keyup', (el) => {
+            const parts = url.value.replace(/([/])/g, " ").split(" ")
+            let keyPath = ""
+            
+            parts.forEach(element => {
+                if (element[0] == ':') {
+                   keyPath += element.replace(":","") + ', '
+                }
+            })
+            pathVariaveis.value = keyPath 
+        })
+    </script>
+</body>
+
+</html>

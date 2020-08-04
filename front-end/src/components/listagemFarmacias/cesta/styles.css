@@ -1,0 +1,37 @@
+.produto {
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.select__control {
+    border: solid 1px #ccc !important;
+    box-shadow: 0px 2px 2px rgba(109, 101, 101, 0.25) !important;
+    border-radius: 3px !important;
+    padding-left: 6px !important;
+    font-size: 16px !important;
+}
+
+.select__single-value {
+    top: 65% !important;
+}
+
+.select__value-container {
+    height: 45px !important;
+}
+
+.select__placeholder {
+    opacity: 0.5 !important;
+    color: hsl(0,0%,50%) !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    position: absolute !important;
+    top: 50% !important;
+}
+
+.select__single-value {
+    position: absolute !important;
+    top: 50% !important;
+}

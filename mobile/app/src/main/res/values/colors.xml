@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0340B8</color>
+    <color name="colorPrimaryDark">#002060</color>
+    <color name="colorAccent">#27C78A</color>
+    <color name="colorAzulTema">#002060</color>
+    <color name="colorVerdeTema">#27C78A</color>
+    <color name="colorCinzaTema">#202020</color>
+    <color name="colorButtonPressed">#586b90</color>
+    <color name="colorButtonWhitePressed">#CCC</color>
+    <color name="colorWhite">#fff</color>
+
+<!--    Lista farmácia -->
+    <color name="colorAvaliacaoFarmacia">#FECE00</color>
+    <color name="colorTextosFarmaciasLista">#CCCCCC</color>
+    <color name="colorItemNavigationBottomFarmaciasLista">#51668F</color>
+
+<!--    Lista produtos -->
+    <color name="colorCategoriaProduto">#323232</color>
+    <color name="colorNomeProduto">#4A4A4A</color>
+    <color name="colorDescricaoProduto">#898686</color>
+    <color name="colorPrecoProduto">#30BE69</color>
+</resources>

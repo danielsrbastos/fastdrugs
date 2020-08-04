@@ -1,0 +1,42 @@
+html, body {
+    overflow-x: hidden !important;
+}
+
+#modal-body button {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#modal-body #button-cliente {
+    border: solid 1px black;
+}
+
+#modal-body #button-farmacia {
+    background-color: #002060;
+    border: solid 1px #002060;
+}
+
+#modal-body #button-farmacia:hover {
+    background-color: #001b52;
+}
+
+#modal-body span {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+}
+
+#modal-body img {
+    width: 130px;
+    margin-top: 20px;
+}
+
+.transition { 
+    transition: 0.5s;
+    transition-timing-function: ease;
+}

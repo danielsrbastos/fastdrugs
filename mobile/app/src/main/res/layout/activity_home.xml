@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Home">
+
+        <!--  Slides  -->
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--  Slides Passo 01 Componente que permite paginar outras views -->
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--    Slides  Passo 11 - onde as 'bolinhas' serão colocadas  -->
+            <LinearLayout
+                android:id="@+id/dots"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+        <!--  Entrar   -->
+        <Button
+            android:id="@+id/button_entrar_home"
+            android:layout_width="318dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/botao_light"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingBottom="11dp"
+            android:text="@string/botao_entrar_home"
+            android:textColor="@color/colorAzulTema"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/button_cadastrar_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <!-- Cadastrar  -->
+        <Button
+            android:id="@+id/button_cadastrar_home"
+            android:layout_width="318dp"
+            android:layout_height="58dp"
+            android:background="@drawable/botao_dark"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingBottom="11dp"
+            android:text="@string/botao_cadastrar_home"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_entrar_home" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

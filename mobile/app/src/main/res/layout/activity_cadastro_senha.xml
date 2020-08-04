@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".CadastroSenhaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_passo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="141dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/campo_senha_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:errorEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_senha"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_senha_ex"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="141dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/campo_confirmar_senha_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:errorEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_confirme_senha"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_senha_ex"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_finalizar_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/botao_proxima_etapa"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="textResult"
+            android:text="@string/botao_finalizar_cadastro"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

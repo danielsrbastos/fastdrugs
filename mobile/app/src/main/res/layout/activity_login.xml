@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAzulTema"
+        android:orientation="vertical"
+        android:paddingBottom="70dp"
+        tools:context=".LoginActivity"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="193dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="38dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/campo_login"
+            android:paddingTop="10dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            tools:layout_editor_absoluteX="1dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_input_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/campo_email"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/campo_login"
+            android:paddingTop="10dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="1dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_input_senha_login"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/campo_senha"
+                android:inputType="textPassword"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="16sp"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_login_senha_invalido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login e/ou senha inválidos."
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button_entrar_login"
+            android:layout_width="318dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/campo_cadastro"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/botao_entrar_home"
+            android:textColor="@color/colorAzulTema"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_ou_login"
+            android:layout_width="157dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/linha_light"
+            android:drawableRight="@drawable/linha_light"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="OU"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_entrar_facebook_login"
+            android:layout_width="318dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/botao_entrar_facebook"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="10dp"
+            android:text="@string/botao_entrar_facebook"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_entrar_google_login"
+            android:layout_width="318dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/botao_entrar_google"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/botao_entrar_google"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="246dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_cadastrar"
+                android:layout_width="149dp"
+                android:layout_height="19dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/nao_tem_conta_cadastrese"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_cadastrar_login"
+                android:layout_width="90dp"
+                android:layout_height="19dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/cadastre"
+                android:textColor="@color/colorVerdeTema"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

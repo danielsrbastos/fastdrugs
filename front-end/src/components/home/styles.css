@@ -1,0 +1,255 @@
+/* Header */
+#header, #header div {
+    height: 60px;
+    background-color: #002060;
+
+    display: flex;
+    align-items: center;
+}
+
+#header #fastDrugs {
+    width: 90px;
+}
+
+#header button,
+#header a {
+    width: inherit;
+    font-weight: 500;
+    
+}
+
+#header button.btn-link {
+    color: #FFF;
+    text-decoration: none; 
+}
+
+#header button.btn a {
+    text-decoration: none;
+    color: #212529;
+}
+
+/* Banner */ 
+#banner {
+    height: 600px;
+    background: #000 url('../../assets/drugs-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+#banner #bannerOverlay {
+    width: 100%;
+    height: inherit;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+#banner #fastDrugs {
+    width: 300px;
+}
+
+#banner h2 {
+    font-size: 60px;
+    color: #EBEBEB;
+    font-weight: 600;
+}
+
+#banner #button-farmacias {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#banner #button-farmacias #button-texto {
+    margin-top: 8px;
+}
+
+#banner #button-farmacias #search {
+    width: 19px;
+    height: 19px;
+    margin-left: 30px;
+    margin-top: 14px;
+}
+
+#banner #button-farmacias #barra-teclado {
+    color: #000;
+    font-size: 30px;
+    margin-left: 6px;
+    font-family: 'Segoe UI Light';
+}
+
+.title{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+.card{
+    background-color: #002060;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.img_card{
+    height: 110px;
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+
+
+.card:hover{
+    background-color:  #12213f;
+    border: solid 0.1px #002060;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #002060;
+    transition: 0.5s;
+}
+
+.img_background{
+    height: 750px;
+    background: #002060;
+}
+
+.img_mask{
+    background: #002060;
+    width: 100%;
+    height: inherit;
+}
+
+.img_logo_empresa{
+    background:  url('../../assets/fastdrugs-3d-hori.png') no-repeat;
+    background-position: center;
+}
+
+.smartphone{
+    background-color: black;
+    width: 380px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    box-sizing: border-box; 
+}
+
+.smartphone-top{
+    background-color: black;
+    width: inherit;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto; 
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    display: flex;
+}
+
+.smartphone-top-camera{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    margin-left: 80px;
+    border-radius: 30px;
+    border:solid white 0.1px;
+}
+
+.smartphone-top-mic{
+    background-color: black;
+    width: 100px;
+    height: 15px;
+    margin-left: 50px;
+    border-radius: 30px;
+    border:solid white 0.1px;
+}
+
+.smartphone-tela{
+    width: 335px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.slide{
+    width: 310px;
+    height: 599px;
+    animation: slider 20s infinite;
+    background:  url('../../assets/home.png') no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes slider{
+    25%{
+        background:  url('../../assets/home.png') no-repeat;
+        background-size: 100%;
+    }
+
+    50%{
+        background:  url('../../assets/farmacia_selecionada.png') no-repeat;
+        background-size: 100%;
+
+    }
+
+    75%{
+        background:  url('../../assets/cesta-compras.png') no-repeat;
+        background-size: 100%;
+
+    }
+}
+
+.smartphone-bottom{
+    background-color: black;
+    width: inherit;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto; 
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.smartphone-bottom-button{
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    border:solid white 0.1px;
+}   
+
+.rodape{
+    height: inherit;
+    display: flex;
+}
+
+.rodape_text{
+    width: 700px;
+    height: inherit;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+    margin-left: 80px;
+}
+
+.p-rodape{
+    font-size: 16px;
+    color: white;
+    font-family: 'Roboto';
+}

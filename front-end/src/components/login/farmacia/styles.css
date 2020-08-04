@@ -1,0 +1,208 @@
+#box {
+    height: 100%;
+    display: flex;
+}
+
+#boxLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#boxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #002060;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: normal;
+}
+
+#subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#boxInputs {
+    width: 90%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+#boxInputs .container {
+    margin-bottom: 15px;
+}
+
+#boxInputs input {
+    width: inherit;
+    height: 45px;
+    border: solid 1px #ccc;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+#boxInputs input::placeholder {
+    color: #ccc;
+    font-size: 16px;
+}
+
+#boxInputs input[type="password"]::placeholder {
+    font-size: 10px;
+    letter-spacing: 1px;
+    position: relative;
+    top: -2px;
+}
+
+.inputText {
+    height: auto;
+    font-size: 18px;
+    padding-left: 15px;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#boxInputs .inputText span {
+    font-weight: normal;
+}
+
+#btnEntrar {
+    width: inherit;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Roboto;
+    background-color: #002060;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 7px;
+    padding: 8px;
+    margin-top: 20px;
+    border: none;
+}
+
+#btnEntrar:hover {
+    background-color: #001b52;
+}
+
+#boxNotRegistered {
+    width: inherit;
+    height: 40px;
+    margin-top: 20px;
+    padding-top: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.link {
+    color: #27C78A;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.link:hover {
+    color: #22b47c;
+    text-decoration: none;
+}
+
+#boxSlider {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#sliderText {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+#slider {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: 50px;
+}
+
+.slider {
+    width: 12px;
+    height: 12px;
+    margin-left: 27px;
+    border-radius: 50px;
+}
+
+#sliderButton1 {
+    margin-left: 0px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#sliderButton2 {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#sliderButton3 {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#sliderButton4 {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#boxRight a img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.boxInputFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFlex input {
+    width: 100% !important;
+}
+
+.tooltipTrigger {
+    border: solid 1.5px #b1b1b1;
+    border-radius: 50px;
+    padding-right: 7px !important;
+    padding-left: 7px !important;
+    margin-left: 8px;
+    font-size: 13px;
+    font-family: 'Source Sans Pro';
+    color: #b1b1b1;
+}

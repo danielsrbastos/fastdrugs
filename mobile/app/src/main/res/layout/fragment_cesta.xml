@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout_cesta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CestaFragment">
+
+    <RelativeLayout
+        android:id="@+id/loading_panel"
+        style="@style/GenericProgressBackground"
+        tools:layout_editor_absoluteX="-15dp"
+        tools:layout_editor_absoluteY="-275dp">
+
+        <ProgressBar style="@style/GenericProgressIndicator" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_cesta"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_view_nome_farmacia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Farmácia Nova"
+                            android:textColor="#363636"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_view_distancia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:text="3.5 km"
+                                android:textColor="#898686"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/text_view_preco"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="3,5Km"
+                                android:textColor="#898686"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/image_view_logo_farmacia"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:adjustViewBounds="false"
+                        android:src="@drawable/lista_farmacia" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_cesta">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linha"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEE"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_produtos_adicionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linha" />
+
+                <!--  Área subtotal -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/area_subtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view_produtos_adicionados">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/area_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:id="@+id/subtotal_pedido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingLeft="3dp"
+                            android:text="Subtotal"
+                            android:textColor="#4E4E4E"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/taxa_entrega_pedido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingLeft="3dp"
+                            android:text="Taxa de entrega"
+                            android:textColor="#4E4E4E"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/subtotal_pedido" />
+
+                        <TextView
+                            android:id="@+id/total_pedido"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingLeft="3dp"
+                            android:text="Total"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/taxa_entrega_pedido" />
+
+                        <TextView
+                            android:id="@+id/subtotal_pedido_valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingRight="3dp"
+                            android:text="R$ 140,90"
+                            android:textColor="#4E4E4E"
+                            android:textSize="14sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/taxa_de_entrega_pedido_valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingRight="3dp"
+                            android:text="R$ 3,50"
+                            android:textColor="#4E4E4E"
+                            android:textSize="14sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/subtotal_pedido_valor" />
+
+                        <TextView
+                            android:id="@+id/total_pedido_valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingRight="3dp"
+                            android:text="R$ 144,40"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/taxa_de_entrega_pedido_valor" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linha3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEE"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/area_total" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Área subtotal -->
+
+                <!-- Área Dados de entrega -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/area_dados_de_entrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    app:layout_constraintTop_toBottomOf="@id/area_subtotal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/dados_de_entrega"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingLeft="3dp"
+                            android:text="Dados de entrega"
+                            android:textColor="#323232"
+                            android:textSize="16sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/endereco_de_entrega"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingLeft="3dp"
+                            android:paddingTop="10dp"
+                            android:text="Rua Dalva, 05 - Jardim São Daniel"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dados_de_entrega" />
+
+                        <TextView
+                            android:id="@+id/cidade_estado_de_entrega"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingLeft="3dp"
+                            android:text="Carapicuíba - São Paulo"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/endereco_de_entrega" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Área Dados de entrega -->
+
+                <!-- Área de forma de pagamento -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/area_forma_de_pagamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    app:layout_constraintTop_toBottomOf="@id/area_dados_de_entrega">
+
+                    <LinearLayout
+                        android:id="@+id/linha4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEE"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/forma_de_pagamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="16dp"
+                        android:text="Forma de pagamento"
+                        android:textColor="#323232"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_formas_pagamento"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/campo_cadastro_light"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="4dp"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@id/forma_de_pagamento"
+                        tools:layout_editor_absoluteX="1dp">
+
+                    </Spinner>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linha2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#EEE"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/area_forma_de_pagamento" />
+
+                <Button
+                    android:id="@+id/button_fazer_pedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/botao_dark"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingBottom="11dp"
+                    android:text="FAZER PEDIDO"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/linha2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cesta_vazia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Sua cesta está vazia :("
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/ver_farmacias_regiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cesta_vazia"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Procure pelas farmácias na sua região para encontrar produtos" />
+    </RelativeLayout>
+</FrameLayout>

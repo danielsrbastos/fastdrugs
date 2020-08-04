@@ -1,0 +1,6 @@
+node_modules
+src/config/database.js
+src/config/firebase.js
+src/config/auth.json
+src/config/googleApiKey.js
+private/9cf0861173657f12693f6c48a3ca9a3d.json

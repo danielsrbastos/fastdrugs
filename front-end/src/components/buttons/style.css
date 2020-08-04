@@ -1,0 +1,21 @@
+.sizeButton{
+    height: 50px;
+    font-size: 24px;
+}
+
+.colorButton{
+    background-color: #002060;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.colorButton:hover {
+    background-color:#FFFFFF;
+    color: #002060;
+}

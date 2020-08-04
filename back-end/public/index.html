@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documentação Api</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        textarea {
+            resize: none;
+            overflow-y: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-dark mb-5">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">Documentação da API</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pharmacy.html">Farmacias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client.html">Clientes</a>
+                    </li>
+                </ul>
+                <div class="my-2 my-lg-0 ">
+                    <button value="adicionarRota" class="btnRoutes btn btn-outline-primary my-2 my-sm-0" type="submit">Adicionar nova rota</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container d-fex flex-wrap justify-content-around">
+        <p>
+            <h3 class="title">Respostas Http</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">200 - OK</li>
+                    <li class="list-group-item">201 - Created</li>
+                    <li class="list-group-item">204 - No Content</li>
+                    <li class="list-group-item">400 - Bad Request</li>
+                    <li class="list-group-item">401 - Unauthorized</li>
+                    <li class="list-group-item">404 - Not Found</li>
+                </ul>
+        </p>
+    </section>
+    <section class="container d-flex flex-wrap justify-content-around mb-3">
+        <div class="card bg-light" style="width: 75rem;">
+            <div class="card-header">
+                <h4 class="mt-1">Rotas de Farmacias</h4>
+            </div>
+            <div class="card-body">
+                <p class="">API De Farmacias com rotas publicas e privadas</p>
+                <button value="pharmacy" type="button" class="btnRoutes btn btn-dark">Ver Rotas</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container d-flex flex-wrap justify-content-around mb-3">
+        <div class="card bg-light" style="width: 75rem;">
+            <div class="card-header">
+                <h4 class="mt-1">Rotas de Clientes</h4>
+            </div>
+            <div class="card-body">
+                <p class="">API De Clientes com rotas publicas e privadas</p>
+                <button value="client" type="button" class="btnRoutes btn btn-dark">Ver Rotas</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/pageFunctions.js"></script>
+    <script src="./js/modalFarmacias.js"></script>
+</body>
+
+</html>

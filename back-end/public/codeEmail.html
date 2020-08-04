@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-style: verdana;
+            font-family: Arial, Helvetica, sans-serif;
+            /* max-width: 100%; */
+            height: auto;
+            box-sizing: border-box;
+        }
+
+        .title {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 100%;
+        }
+
+        #container {
+            width: 100%;
+            min-height: 5vh;
+            height: auto;
+            background: url(https://storage.googleapis.com/fastdrugs-4cdfa.appspot.com/Pharmacy_432123388_0.png);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rowCode, .row {
+            min-height: 6vh;
+            height: auto;
+            display: grid;
+            grid-column-gap: 20px;
+            grid-row-gap: 14px;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            flex-wrap: nowrap;
+        }
+
+        .mpRow {
+            padding: 10px;
+            margin: 25px;
+        }
+
+        .colCode, .col {
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .colCode {
+            background-color: royalblue;
+            border-radius: 5px;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .containerImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: royalblue;
+            display: flex;
+        }
+
+        .containerImg img {
+            width: 80%;
+            height: auto;
+            align-self: center;
+            margin: auto;
+        }
+
+        .dataImage {
+            width: 100%;
+            padding-top: 5vh;
+            padding-bottom: 10vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            justify-items: center;
+            grid-row-gap: 30px;
+        }
+
+        .containerText {
+            height: auto;
+            min-height: 10vh;
+        }
+
+        .containerText p {
+            color: white;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        .aviso {
+            width: 100%;
+            height: 7vh;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .aviso p {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .colImg {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .colText {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .colText2{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div class="dataImage">
+            <div class="row mpRow">
+                <div class="col colImg">
+                                      
+                </div>
+                <div class="col colText">
+                    <div class="containerText">
+                        <div class="row">
+                            <div class="col colImg containerImg">
+                                <img src="https://storage.googleapis.com/fastdrugs-4cdfa.appspot.com/FastDrugs3DWhiteHorizontal.png"/>
+                            </div>  
+                            <div class="col colText2">
+                                <h1 class=" title">
+                                    Codigo De Verifição
+                                </h1>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <p>
+                            Olá Sr(a). <strong>{{username}}</strong>, Aqui é a <strong>Fast Drugs</strong>. Enviamos esse e-mail para verificar se pertence a você. Por favor digite o codigo de verifição para ir a proxima etapa!.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mpRow">
+                <div class="colCode">
+                        {{code0}} {{code1}} {{code2}} {{code3}} {{code4}} {{code5}}                       
+                </div>
+            </div>
+            <div class="row mpRow">
+                <div class="containerText">
+                    <br>
+                    <h2 style="color: #ffffff;">
+                        A Fast Drugs agrade pela compreensão!
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aviso">
+        <p>
+            Caso essa pessoa não for você. Por favor desconsidere esse e-mail.
+        </p>
+    </section>
+</body>
+</html>

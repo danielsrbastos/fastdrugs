@@ -1,0 +1,133 @@
+#header, #header div {
+    width: 100%;
+    height: 6.5vh;
+    z-index: 999;
+}
+
+#header {
+    margin-left: 0 !important;
+}
+
+#menuLateral {
+    width: 0px;
+    height: 93.5vh;
+    background: #2a2a2a;
+    position: absolute;
+    top: 6.5vh;
+    z-index: 999;
+}
+
+#menuIconBox {
+    width: 20px !important; 
+    height: auto !important;
+    display: flex !important; 
+    flex-direction: column !important;
+    padding-left: 30px !important;
+    padding-right: 35px !important;
+    cursor: pointer;
+}
+
+.menuIconItem {
+    width: 20px !important;
+    height: 3px !important; 
+    background: #fff !important;
+    color: #fff;
+}
+
+.menuItem {
+    width: inherit;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+#btnProduto {
+    font-size: 16px;
+}
+
+#listaCategorias .categoria {
+    border: solid 1px #ccc !important;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25) !important;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.defaultText {
+    font-size: 18px;
+    color: #444;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.select__control {
+    border: solid 1px #ccc !important;
+    box-shadow: 0px 2px 2px rgba(109, 101, 101, 0.25) !important;
+    border-radius: 3px !important;
+    padding-left: 6px !important;
+    font-size: 16px !important;
+}
+
+.select__single-value {
+    top: 65% !important;
+}
+
+.select__value-container {
+    height: 45px !important;
+}
+
+.select__placeholder {
+    opacity: 0.5 !important;
+    color: hsl(0,0%,50%) !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    position: absolute !important;
+    top: 50% !important;
+}
+
+.select__single-value {
+    position: absolute !important;
+    top: 50% !important;
+}
+
+.select__input input {
+    height: initial !important;
+}
+
+.imagemSlider {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-size: 100%;
+    border-radius: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1.5px dashed #ddd;
+    margin-right: 16px;
+}
+
+.imagemSlider label {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    cursor: pointer;
+}
+
+.imagemSlider input {
+    display: none;
+}
+
+.selectedProduct {
+    border: 0.4px solid #10c73b !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}

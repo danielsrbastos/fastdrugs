@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "535156882428",
+    "firebase_url": "https://fastdrugs-1a9b1.firebaseio.com",
+    "project_id": "fastdrugs-1a9b1",
+    "storage_bucket": "fastdrugs-1a9b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535156882428:android:3edcc4835dacb8b4a65079",
+        "android_client_info": {
+          "package_name": "br.com.fastdrugs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535156882428-nk84ijevn1oco2okbvgm1t92eapt9tlr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBheozZnqqZD5pJ6d9IqF8k1TjHkvL_pjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535156882428-nk84ijevn1oco2okbvgm1t92eapt9tlr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

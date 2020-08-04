@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:title="Início"
+        android:icon="@drawable/ic_casa_white"/>
+
+    <item
+        android:id="@+id/cesta"
+        android:title="Cesta"
+        android:icon="@drawable/ic_cesta_white"/>
+
+    <item
+        android:id="@+id/pedidos"
+        android:title="Pedidos"
+        android:icon="@drawable/ic_lista_white"/>
+
+    <item
+        android:id="@+id/conta"
+        android:title="Conta"
+        android:icon="@drawable/ic_pessoa_white"/>
+</menu>

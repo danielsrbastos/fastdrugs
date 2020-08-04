@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroCepActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_passo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="115dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/campo_cep_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_cep"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_cep"
+            android:inputType="text"
+            android:maxLength="9"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/useMinhaLocalizacao"
+        android:layout_width="182dp"
+        android:layout_height="19dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/usar_localizacao"
+        android:textColor="@color/colorVerdeTema"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_bold" />
+
+    <ProgressBar
+        android:id="@+id/pgBar"
+        style="@style/GenericProgressIndicator"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_proxima_etapa_cep"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/botao_proxima_etapa"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/botao_proxima_etapa"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

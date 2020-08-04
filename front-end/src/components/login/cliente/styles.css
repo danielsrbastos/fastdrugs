@@ -1,0 +1,70 @@
+#boxOr {
+    width: 334px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: black 3px solid;
+    margin-bottom: 200px;
+}
+
+#boxTextOr {
+    width: 50px;
+    height: inherit;
+    background-color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+#loginFacebook, #loginGoogle {
+    width: inherit;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Roboto;
+    background-color: #3C5899;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 7px;
+    padding: 8px;
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#loginFacebook:hover {
+    background-color: #23489e;
+}
+
+#logoFacebook, #logoGoogle {
+    display: flex;
+    justify-content: left;
+}
+
+#textFacebook, #textGoogle {
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+}
+
+#loginGoogle {
+    background-color: #4384FC;
+}
+
+#loginGoogle:hover {
+    background-color: #2c76ff;
+}
+
+#boxSlider img {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+#sliderText span {
+    font-weight: bold;
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroCpfActivity" >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_passo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="196dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/campo_nome_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_nome"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_nome"
+            android:inputType="textPersonName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="196dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/campo_cpf_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_cpf"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="196dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/campo_celular_instrucao"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_light" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/campo_cadastro_light"
+        android:paddingTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_input_celular"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/campo_celular"
+            android:inputType="number"
+            android:maxLength="15"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_proxima_etapa_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/botao_proxima_etapa"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/botao_proxima_etapa"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
